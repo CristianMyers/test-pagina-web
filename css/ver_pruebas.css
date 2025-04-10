@@ -1,0 +1,158 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    background: url('/sanviator_v2/imagenes/imageninterior.jpg') no-repeat center center;
+    background-size: cover;
+    padding-top: 90px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #215c84;
+    padding: 15px 30px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    color: white;
+}
+
+.navbar h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.btn-volver {
+    padding: 10px 20px;
+    background-color: #30c6dd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-volver:hover {
+    background-color: #00c39c;
+}
+
+/* Contenedor principal */
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado */
+.created-tests h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Tabla de pruebas */
+.created-tests table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.created-tests th {
+    background-color: #215c84;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #174b6b;
+}
+
+.created-tests td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Filas alternas */
+.created-tests tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.created-tests tbody tr:hover {
+    background-color: #e1eaff;
+}
+
+/* Estilo del botón Descargar */
+.btn-descargar {
+    padding: 8px 15px;
+    background-color: #30c6dd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-descargar:hover {
+    background-color: #00c39c;
+}
+
+.created-tests td .btn-descargar {
+    width: 150px;
+    text-align: center;
+    display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .btn-volver {
+        width: 100%;
+        text-align: center;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .created-tests table, .created-tests th, .created-tests td {
+        font-size: 14px;
+    }
+
+    .created-tests td .btn-descargar {
+        width: 120px;
+    }
+}

@@ -1,0 +1,133 @@
+/* Estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background-color: #215c84;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h1 {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.navbar-logo {
+    height: 40px;
+}
+
+/* Contenedor del formulario */
+form {
+    background-color: #fff;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px; /* Para evitar que el navbar lo cubra */
+}
+
+/* Título */
+form h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Label */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Campos de entrada */
+input[type="date"],
+textarea {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Botón de envío */
+button {
+    background-color: #215c84;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #1a4f6e;
+}
+
+/* Botón de volver */
+.btn-volver {
+    display: block;
+    text-align: center;
+    background-color: #dc3545;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-volver:hover {
+    background-color: #b02a37;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    form {
+        padding: 20px;
+    }
+    input[type="date"],
+    textarea {
+        font-size: 14px;
+    }
+    button {
+        font-size: 14px;
+    }
+}

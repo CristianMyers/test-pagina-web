@@ -1,0 +1,218 @@
+/* Reset de márgenes y rellenos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #215c84;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 1000;
+}
+
+/* Hamburguesa (izquierda) */
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 22px;
+    height: 18px;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Logo (derecha) */
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* Título centrado */
+.navbar-text {
+    font-size: 24px;
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    background-color: #215c84;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(203, 197, 197, 0.1);
+    transition: left 0.3s ease;
+    z-index: 1100;
+    padding: 20px;
+}
+
+.sidebar.visible {
+    left: 0;
+}
+
+.close-container {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.close-btn {
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+    padding: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.close-btn:hover {
+    transform: scale(1.2);
+    color: #ff0000;
+}
+
+.sidebar .user-info {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #1e4e6c;
+    color: white;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+.sidebar button:hover {
+    background-color: #ff0000;
+}
+
+/* Contenedor de los botones */
+.container {
+    display: flex;
+    flex: 1;
+    margin-top: 60px; /* altura navbar */
+    height: calc(100vh - 60px);
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Botón con imagen */
+.button {
+    flex: 1;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Imagen con desenfoque */
+.button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(8px);
+    transition: filter 0.3s ease-in-out;
+}
+
+.button:hover img {
+    filter: blur(0);
+}
+
+.button:active {
+    opacity: 0.9;
+}
+
+/* Texto encima */
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .navbar-text {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .button {
+        height: 33%;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hamburger {
+        width: 20px;
+        height: 16px;
+    }
+}

@@ -1,0 +1,221 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('/sanviator_v2/imagenes/imagenfondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #215c84;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Icono de menú (logo) */
+.menu-icon {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Título centrado */
+.navbar-text {
+    font-size: 24px;
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: center;
+    margin-right: 50px; /* Para compensar el espacio del ícono y mantener centrado */
+}
+
+/* Container */
+.container {
+    background-color: #eeeade;
+    width: 90%;
+    max-width: 1600px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    margin: 80px auto;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #215c84;
+    color: white;
+}
+
+/* Column striping */
+#tablaAusentes tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#tablaAusentes tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Center actions */
+#tablaAusentes td:last-child {
+    text-align: center;
+}
+
+/* Button */
+.reagendar {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.reagendar:hover {
+    background-color: #e68900;
+}
+
+/* Modal */
+.ventana-emergente {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.ventana-contenido {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    width: 900px;
+    max-height: 650px; /* Ajusta el alto máximo */
+    overflow-y: auto;  /* Hace scroll si el contenido es muy largo */
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Close */
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #555;
+    cursor: pointer;
+}
+
+.cerrar:hover {
+    color: #d9534f;
+}
+
+/* Inputs */
+.ventana-contenido label {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.ventana-contenido input, .ventana-contenido textarea {
+    width: 90%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.ventana-contenido input:focus, .ventana-contenido textarea:focus {
+    border-color: #007BFF;
+}
+
+/* Submit button */
+.ventana-contenido button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.ventana-contenido button:hover {
+    background: linear-gradient(135deg, #0056b3, #004085);
+}
+
+/* Filtros select */
+.filtros select {
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+/* Estilo para el select de pruebas en el modal */
+#pruebaSelect {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 15px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+#pruebaSelect:focus {
+    border-color: #007BFF;
+}
+
+/* Asegurar que el formulario sea responsivo y los inputs estén alineados */
+.ventana-contenido input, .ventana-contenido textarea, #pruebaSelect {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}

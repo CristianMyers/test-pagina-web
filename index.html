@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Asistencia de Alumnos</title>
+    <link rel="stylesheet" href="http://localhost/sanviator_v2/css/login.css?<?php echo time(); ?>">
+
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="logo">
+        <img src="/sanviator_v2/imagenes/logosinfondo.png" alt="Logo de Asistencia" />
+        </div>
+        <h1>Iniciar Sesión</h1>
+
+        <!-- Formulario para el login -->
+        <form action="login.php" method="POST">
+            <label for="gmail">Gmail:</label>
+            <input type="text" id="gmail" name="gmail" placeholder="Escribe tu gmail" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" placeholder="Escribe tu contraseña" required>
+
+            <button type="submit">Ingresar</button>
+
+            <!-- Mostrar mensaje de error -->
+            <?php if (!empty($error)): ?>
+                <p class="error-message"><?php echo $error; ?></p>
+            <?php endif; ?>
+        </form>
+    </div>
+</body>
+
+</html>
